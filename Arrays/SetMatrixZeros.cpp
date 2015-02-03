@@ -4,7 +4,9 @@
 #include <algorithm>
 using namespace std;
 
-/*Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.*/
+/*Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
+Strategy: 2 arrays: rows and cols. Mark down which indices have 0. Uses O(m+n) extra space. 
+*/
 
 void setZeroes(vector<vector<int>> &matrix){
 	int num_rows = matrix.size();
