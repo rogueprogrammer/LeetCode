@@ -5,7 +5,7 @@
 using namespace std;
 
 
-
+/*O(n) time, O(1) extra space */
 int LargestContiguousSumSubarray(int a[], int size){
 	int max_so_far = a[0];
 	int cur_max = a[0];
