@@ -13,6 +13,8 @@
 #include <queue>
 using namespace std;
 
+//https://oj.leetcode.com/problems/word-ladder/
+
 bool OneCharDiff(const string& str1, const string& str2){
 	if (str1.size() != str2.size()) return false;
 	int diff = 0;
