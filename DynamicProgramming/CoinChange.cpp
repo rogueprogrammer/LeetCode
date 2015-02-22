@@ -1,6 +1,6 @@
 #include "header.h"
 
-//Given an amount, and a vector v contianing coin denomination values, finds the minimum # of coins to make the amount.
+//Given an amount, and a vector v containing coin denomination values, finds the minimum # of coins to make the amount.
 int CoinChange(int amount, vector<int> v){
 
 	vector<int> C(amount);
