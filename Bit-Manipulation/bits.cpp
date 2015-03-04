@@ -12,6 +12,16 @@
 using namespace std;
 
 
+//Print all the individual Bits of a number
+void PrintBits(int x){
+	for (int i = sizeof(x)-1; i >= 0; i--){
+	  bool res = (x & (1 << i));
+	  cout << res << endl;
+	}
+}
+
+
+
 //Set bit to 1. If it's already a 1, it remains a 1
 int SetBit(int num, int x){
   return num | (1 << x);
@@ -35,6 +45,18 @@ int GetValue(int num, int x){
 bool IsPowerof2(int num){
   return (num & (num -1) == 0);
 }
+
+bool IsPowerof2(int num){
+	while(num > 0 ){
+	    if( 1 == (num & 1) ){
+	      return (num == 1);
+	    }
+	    num = num >> 1;
+	}
+  return false;
+}
+
+
 
 bool OppositeSigns(int x, int y){
   return (x ^ y) < 0;
