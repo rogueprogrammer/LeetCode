@@ -44,12 +44,26 @@ int QuickSelect(vector<int>& A, int k){
 	return QuickSelectUtil(A, k-1 , 0, A.size()-1);
 }
 
+void QuickSort(vector<int>& A, int low, int hi){
+	if (low < hi){
+		int p = Partition(A, low, hi);
+		QuickSort(A, low, p - 1);
+		QuickSort(A, p + 1, hi);
+	}
+}
+
+
 
 void main(){
 
 	vector<int> A = { 5, 2, 6, 9, 4 };
 	//cout << Partition(A, 0, A.size() - 1) << endl;
-	cout << QuickSelect(A, 2) << endl;
-	cout << QuickSelect(A, 3) << endl;
+	//cout << QuickSelect(A, 2) << endl;
+	//cout << QuickSelect(A, 3) << endl;
+	QuickSort(A, 0, A.size()-1);
+	for (int i = 0; i < A.size(); ++i){
+		cout << A[i] << endl;
+	}
+	system("PAUSE");
 
 }
