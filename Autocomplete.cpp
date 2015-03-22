@@ -101,6 +101,26 @@ public:
 
 };
 
+/*Given a list of strings, find the largest common prefix */
+string LongestCommonPrefix(const vector<string> strs){
+	string res = "";
+	int i = 0;
+	string first = strs[0];
+	int j = 1;
+	int k = i;
+
+	for (int k = i; k < first.size(); ++k){
+		for (int j = 1; j < strs.size(); ++j){
+			if (first[i] != strs[j][k]) {
+				return res;
+			}
+		}
+		res += first[i++];
+	}
+	return res;
+}
+
+
 int main(){
 
 	Trie *trie = new Trie();
@@ -112,4 +132,10 @@ int main(){
 	trie->Autocomplete("ab");
 	cout << endl;
 	trie->PrintTrie();
+	cout << endl;
+	vector<string> strs = { "abc", "abe", "able", "ac" };
+	cout << LongestCommonPrefix(strs) << endl;
+
+	return 0;
+	
 }
