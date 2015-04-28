@@ -1,19 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <string>
-#include <vector>
-#include <stdlib.h>
-#include <stack>
-#include <unordered_map>
-#include <map>
-#include<cstdio>
-#include<cstring>
-#include<cstdlib>
-#include<cmath>
-#include <cmath>
-#include <set>
-#include <unordered_set>
-using namespace std;
+#include "header.h"
 
 
 bool IsPalindrome(int x){
