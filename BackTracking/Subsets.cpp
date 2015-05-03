@@ -11,7 +11,7 @@ using namespace std;
 //// https://leetcode.com/problems/subsets/
 //Given a set of numbers, find all possible subsets. 
 //Note that normally, backtracking is to be used for this problem. But I used dynamic programming to solve this problem.
-
+//Runtime is still O(2 ^ n) even tho dynamic programming is used, since the vector res grows dynamically, upto 2^n-1 rows.
 /*
 [1] => {1}
 [1, 2] => {1} + {1,2} + {2}
