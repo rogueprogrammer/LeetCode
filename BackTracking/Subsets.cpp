@@ -9,7 +9,8 @@
 using namespace std;
 
 //// https://leetcode.com/problems/subsets/
-//Given a set of numbers, find all possible subsets
+//Given a set of numbers, find all possible subsets. 
+//Note that normally, backtracking is to be used for this problem. But I used dynamic programming to solve this problem.
 
 /*
 [1] => {1}
