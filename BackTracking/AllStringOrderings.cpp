@@ -7,6 +7,8 @@ using namespace std;
 Given an ordered string, find the set of ordered indices of all permutations of the string that equal the orginal string.
 Ex:
 For "ABAB" -> 0123, 2301, 0321, 2103}
+Normally, a recursive DFS solution is required. My solution performs iterative DFS solution that considers all possible
+combinations.
 */
 
 set<vector<int>> AllOrderings(string str){
