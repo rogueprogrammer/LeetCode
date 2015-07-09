@@ -5,7 +5,7 @@
 using namespace std;
 
 //https://leetcode.com/problems/combinations/
-
+//RUNTIME IS: O(n-choose-k)
 vector<vector<int>> res;
 
 void DFS(int n, int k, int posn, int val, vector<int>& row){
