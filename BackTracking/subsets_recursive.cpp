@@ -30,7 +30,7 @@ vector<vector<int>> subsets(vector<int>& nums){
 }
 
 
-void main(){
+int main(){
 	vector<int> nums = { 1, 2, 3, 4 };
 	subsets(nums);
 	for (int i = 0; i < res.size(); ++i){
@@ -39,5 +39,5 @@ void main(){
 		}
 		cout << endl;
 	}
-	system("PAUSE");
+	return 0;
 }
