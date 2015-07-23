@@ -7,7 +7,7 @@ using namespace std;
 
 //https://leetcode.com/problems/combination-sum/
 //Problem with my solution is that it includes all permutations of all the combinations.
-//To fix this, just use a set to include unique vector of integers. <- DOESNT WORK.  USE DYNAMIC PROGRAMMING SOLUTION INSTEAD
+//To fix this, just use a set to include unique vector of integers. <- DOESNT WORK. USE DYNAMIC PROGRAMMING INSTEAD.
 
 
 set<vector<int>> res2;
@@ -41,6 +41,14 @@ void DFS2(vector<int> nums, int target, vector<int>& row, int& sumAcc){
 	}
 }
 
+set<vector<int>> combinationSum(vector<int> & candidates, int target){
+	sort(candidates.begin(), candidates.end());
+	int sum = 0;
+	vector<int> row;
+
+	DFS2(candidates, target, row, sum);
+	return res2;
+}
 
 
 
@@ -49,10 +57,7 @@ int main(){
 
 	vector<int> nums = { 2, 3, 6, 7 };
 	int target = 13;
-	vector<int> row;
-	int sumAcc = 0;
-	sort(nums.begin(), nums.end());
-	DFS2(nums,  target, row, sumAcc);
+	combinationSum(nums, target);
 	
 	return 0;
 }
