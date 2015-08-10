@@ -7,7 +7,7 @@ using namespace std;
 
 //https://leetcode.com/problems/unique-binary-search-trees/
 /* Given n, how many unique BSTs can be constructed with nodes 1, ..., n?
-We can use recursion or DP.
+We can use recursion or DP. I choose DP.
 Store the count of the number of unique BSTS in an array.
 Let DP[i] = # of BSTs of length i
 Consider an example. Lets say we want to compute DP[3], this means number of BSTs of length 3. 
