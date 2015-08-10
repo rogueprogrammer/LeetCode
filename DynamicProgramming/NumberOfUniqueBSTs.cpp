@@ -10,7 +10,7 @@ using namespace std;
 We can use recursion or DP. I choose DP.
 Store the count of the number of unique BSTS in an array.
 Let DP[i] = # of BSTs of length i
-Consider an example. Lets say we want to compute DP[3], this means number of BSTs of length 3. 
+Consider an example. Lets say we want to compute DP[3], the number of BSTs of length 3. 
 For simplicity, the nodes we are considering are 1,2, and 3.
 We would have to consider each node as a root, and count the number of nodes in the left subtree and multiply it with 
 number of nodes in the right subtree (CARTESIAN PRODUCT) to consider all possibilities. 
