@@ -1,6 +1,6 @@
 #include "header.h"
 
-int LongestCommonPalindromeSubstring(string x){
+int LongestPalindromeSubstring(string x){
 	int n = x.size();
 	vector<vector<int>> L(n, vector<int> (n));
 
