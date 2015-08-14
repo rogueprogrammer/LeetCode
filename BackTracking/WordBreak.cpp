@@ -14,7 +14,6 @@ bool DFS(string s, vector<string> dict, int& s_posn, bool& flag){
 
 	if (s_posn > s.size() - 1){ 
 		flag = true; 
-		return true;
 	}
 
 	for (int i = 0; i < dict.size(); ++i){
