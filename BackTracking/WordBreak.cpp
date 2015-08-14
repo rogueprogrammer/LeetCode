@@ -41,9 +41,9 @@ int main(){
 	vector<string> dict = {
 		"leet", "code", "leets"
 	};
-	cout << wordBreak("leet", dict) << endl;
-	cout << wordBreak("leetz", dict) << endl;
-	cout << wordBreak("leetcode", dict) << endl;
+	cout << wordBreak("leet", dict) << endl;   //true
+	cout << wordBreak("leetz", dict) << endl;  //false
+	cout << wordBreak("leetscode", dict) << endl;  //true
 
 	return 0;
 }
