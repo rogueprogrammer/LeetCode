@@ -8,6 +8,7 @@ using namespace std;
 #define DEBUG_VEC(x) for(int i = 0; i < x.size(); ++i){ for(int j = 0; j < x[0].size(); ++ j){cout << x[i][j] << " ";} cout << endl;}
 
 //https://leetcode.com/problems/word-break/
+//Returns true/false whether a string be concatenated by the words in a given dictionary.
 //Note that this version solves it using DFS. The problem is flagged under DP, but it can also be solved using DFS
 
 bool DFS(string s, vector<string> dict, int& s_posn, bool& flag){
