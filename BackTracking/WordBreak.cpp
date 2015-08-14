@@ -44,6 +44,9 @@ int main(){
 	cout << wordBreak("leet", dict) << endl;   //true
 	cout << wordBreak("leetz", dict) << endl;  //false
 	cout << wordBreak("leetscode", dict) << endl;  //true
+        cout << wordBreak("leetscodeleetsleetsleet", dict) << endl;  //true
+	cout << wordBreak("leetscodeleetsleetsleetss", dict) << endl; //false
+
 
 	return 0;
 }
