@@ -10,7 +10,7 @@ using namespace std;
 #define DEBUG_1D(x) for(int i = 0; i < x.size(); ++i){cout << x[i] << " ";}  cout << endl;
 //https://leetcode.com/problems/word-break/
 //This is a DP solution
-//let DP[i] = true if word can be formed from s[j...i] where j = 0 initially and is updated to the next DP[i] that is 1
+//let DP[i] = true if word can be formed from s[j...i] 
 
 
 bool wordBreak(string s, unordered_set<string> & dict){
