@@ -20,7 +20,6 @@ int minimumTotal(vector<vector<int>>& triangle) {
 	for (int i = 0; i < num_rows; ++i){
 		vector<int> temp(i + 1);
 		for (int j = 0; j <= i; ++j){
-			
 			if (i == 0){
 				temp[0] = triangle[0][0];
 			}
@@ -29,7 +28,6 @@ int minimumTotal(vector<vector<int>>& triangle) {
 				temp[1] = res[0] + triangle[1][1];
 			}
 			else{
-
 				if (j == 0){
 					temp[j] = std::min(res[0], res[1]) + triangle[i][j];
 				}
@@ -56,19 +54,16 @@ int minimumTotal(vector<vector<int>>& triangle) {
 	for (int i = 1; i < res.size(); ++i){
 		if (res[i] < _min) _min = res[i];
 	}
-
 	return _min;
 }
 
 int main(){
-
 	vector<vector<int>> triangle = {
 		{2},
 		{3, 4},
 		{6,5, 7},
 		{4, 1, 8, 3}
 	};
-
 	cout << minimumTotal(triangle) << endl;
 	return 0;
 }
