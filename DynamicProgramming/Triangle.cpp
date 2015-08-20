@@ -60,9 +60,6 @@ int minimumTotal(vector<vector<int>>& triangle) {
 	return _min;
 }
 
-
-
-
 int main(){
 
 	vector<vector<int>> triangle = {
@@ -75,4 +72,3 @@ int main(){
 	cout << minimumTotal(triangle) << endl;
 	return 0;
 }
-
