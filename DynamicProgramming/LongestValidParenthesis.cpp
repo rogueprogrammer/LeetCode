@@ -12,7 +12,7 @@ using namespace std;
 
 //https://leetcode.com/problems/longest-valid-parentheses/
 //Idea is to maintain a stack of positions, where whatever position left on stack is the last unsatisfied bracket position
-//Updating accumlator variable max_len accordingly...
+//Updating accumlator variable max_len based on current position and last unsatisfied bracket position whenever we see a satisfying pair
 //This solution is purely stack-based, even tho the problem is flagged as DP. O(n) space and time
 
 int longestValidParentheses(string str) {
