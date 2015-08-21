@@ -37,10 +37,6 @@ int longestValidParentheses(string str) {
 	return max_len;
 }
 
-
-
-
-
 int main(){
 
 	cout << longestValidParentheses("(()()))(()()()()") << endl;
@@ -49,16 +45,4 @@ int main(){
 	
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
