@@ -64,5 +64,7 @@ int main(){
 	partition("2002");
 	cout << endl;
 	partition("aabcc");
+	cout << endl;
+	partition("2000101002");
 	return 0;
 }
