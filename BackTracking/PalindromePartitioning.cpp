@@ -27,7 +27,7 @@ bool IsPalindrome(string s){
 	return true;
 }
 
-void DFS(string s, int curPos, int len, vector<vector<string>>& res, vector<string>& row){
+void DFS(string s, int curPos,  vector<vector<string>>& res, vector<string>& row){
 	if (curPos >= s.size()){
 		res.push_back(row);
 		return;
@@ -38,7 +38,7 @@ void DFS(string s, int curPos, int len, vector<vector<string>>& res, vector<stri
 		if (IsPalindrome(cur)){
 			row.push_back(cur);
 			curPos += i;
-			DFS(s, curPos, i, res, row );
+			DFS(s, curPos, res, row );
 			curPos -= i;
 			row.pop_back();
 		}
@@ -49,7 +49,7 @@ void DFS(string s, int curPos, int len, vector<vector<string>>& res, vector<stri
 vector<vector<string>> partition(string s) {
 	vector<vector<string>> res;
 	vector<string> row;
-	DFS(s, 0, 1, res, row);
+	DFS(s, 0,  res, row);
 	for (int i = 0; i < res.size(); ++i){
 		int len = res[i].size();
 		for (int j = 0; j < len; ++j){
@@ -65,6 +65,19 @@ int main(){
 	cout << endl;
 	partition("aabcc");
 	cout << endl;
-	partition("2000101002");
+	partition("200101002");
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
