@@ -11,7 +11,7 @@ using namespace std;
 #define DEBUG_2D(x) for(int i = 0; i < x.size(); ++i){ for(int j = 0; j < x[0].size(); ++ j){cout << x[i][j] << " ";} cout << endl;}
 #define DEBUG_1D(x) for(int i = 0; i < x.size(); ++i){cout << x[i] << " ";}  cout << endl;
 //https://leetcode.com/problems/decode-ways/
-
+//O(n) algorithm to find number of ways to decode a string:
 int numDecodings(string s){
 	vector<int> DP(s.size()); //let DP[i] = number of decodings upto s[i]
 
