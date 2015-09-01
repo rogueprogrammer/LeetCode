@@ -21,7 +21,7 @@ int numDecodings(string s){
 		}
 		else{
 			int prev = tolower(s[i - 1]) - '1';
-			int cur = tolower(s[i] - '1');
+			int cur = tolower(s[i]) - '1';
 			if (prev <= 2 && cur <= 6){
 				DP[i] = DP[i - 1] + 1;
 			}
