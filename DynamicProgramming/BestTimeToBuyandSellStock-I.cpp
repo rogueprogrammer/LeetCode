@@ -10,7 +10,7 @@
 #include <unordered_set>
 using namespace std;
 #define DEBUG_1D(x) for(int i = 0; i < x.size(); ++i){cout << x[i] << " ";} cout << endl;
-//https://leetcode.com/submissions/detail/39007560/
+//https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 int maxProfit(vector<int>& prices) {
 	if (prices.size() == 0) return 0;
