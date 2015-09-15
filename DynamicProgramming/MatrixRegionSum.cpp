@@ -14,6 +14,7 @@ typedef int int64;
 
 /*
 Problem: Matrix Region Sum.
+Source: http://www.ardendertat.com/2011/09/20/programming-interview-questions-2-matrix-region-sum/ (My solution is different from the author's)
 Given {matrix of numbers, start row, start col, end row, end col} , find the sum of the numbers in the region of the matrix.
 This can easily be solved in O(n^2) naiive brute force.
 The algorithm below solves it in O(n). It caches the accumulated sums from A[0][0] to A[i][j] in a matrix called DP[i][j].
