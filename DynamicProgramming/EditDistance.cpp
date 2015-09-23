@@ -13,6 +13,7 @@ using namespace std;
 typedef int int64;
 
 //https://leetcode.com/problems/edit-distance/
+//let DP[i][j] = min number of operations (distance) from word1[0, .., i] to word2[0, .., j]
 
 int minDistance(string word1, string word2){
 	int rows = word1.size() ; int cols = word2.size() ;
