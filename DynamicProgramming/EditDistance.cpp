@@ -14,7 +14,7 @@ typedef int int64;
 
 //https://leetcode.com/problems/edit-distance/
 //let DP[i][j] = min number of operations (distance) from word1[0, .., i] to word2[0, .., j]
-
+//Time complexiy = space complexity = O(mn) where m = word1.size and n = word2.size
 int minDistance(string word1, string word2){
 	int rows = word1.size() ; int cols = word2.size() ;
 	vector<vector<int>> DP(rows, vector<int>(cols));
