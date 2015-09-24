@@ -52,7 +52,7 @@ int minDistance(string word1, string word2){
 			DP[i][j] = min(min(del, ins),  rep);
 		}
 	}
-	DEBUG_2D(DP);
+	//DEBUG_2D(DP);
 	return DP[rows-1][cols-1];
 }
 
