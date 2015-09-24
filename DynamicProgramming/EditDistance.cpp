@@ -24,20 +24,11 @@ int minDistance(string word1, string word2){
 	for (int i = 0; i < cols; ++i){
 		if (!seen && word1[0] == word2[i]){
 			seen = true;
-			if (i == 0){
-				DP[0][i] = 0;
-			}
-			else{
-				DP[0][i] = DP[0][i - 1];
-			}
-		}
-		else{
-			if (i == 0){
-				DP[0][i] = 1;
-			}
-			else{
-				DP[0][i] = DP[0][i - 1] + 1;
-			}
+			if (i == 0) DP[0][i] = 0;
+			else DP[0][i] = DP[0][i - 1];
+		} else{
+			if (i == 0) DP[0][i] = 1;
+			else DP[0][i] = DP[0][i - 1] + 1;
 		}
 	}
 
@@ -47,8 +38,7 @@ int minDistance(string word1, string word2){
 		if (!seen && word2[0] == word1[i]){
 			seen = true;
 			DP[i][0] = DP[i - 1][0];
-		}
-		else{
+		}else{
 			DP[i][0] = DP[i - 1][0] + 1;
 		}
 	}
