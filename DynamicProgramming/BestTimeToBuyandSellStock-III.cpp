@@ -15,6 +15,7 @@ typedef int int64;
 
 //https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
 //update - this is a working solution (passed all test cases)
+//O(n) algorithm 
 
 int maxProfit(vector<int>& prices) {
 	if (prices.size() == 0) return 0;
