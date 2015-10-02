@@ -1,4 +1,4 @@
-After doing the LC DP problems, I've come up with a methodology that I find helps when I'm stuck on DP problems.
+After doing the LC DP problems, I've come up with a methodology that I find helps when trying to solve DP problems.
 If stuck in the future, I should keep this "template of solving DP problems" in my mindset:
 
 - depending on the number of parameters involved in the problem (typically 1 or 2), make a table or array with dimension equal to the number of parameters. So if param1 has range 0,.., i and param2 has range 0,..j then i rows, j columns.
