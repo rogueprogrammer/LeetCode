@@ -13,8 +13,11 @@ using namespace std;
 Given a vector of strings and another string (called conc), return whether or not conc can be formed by the concatenation of
 other strings in the set. 
 
-My approach uses dynamic programming to form all possible subsets from the given set, and then sees if conc can be formed
+This approach forms all possible subsets from the given set, and then sees if conc can be formed
 by the concatenation of the elements in the list of all possible subsets.
+
+Better/simpler solution is to use backtracking. (see LeetCode/Backtracking/WordBreak.cpp for backtracking solution)
+
 */
 
 
