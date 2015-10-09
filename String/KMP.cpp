@@ -57,8 +57,7 @@ int KMP(string txt, string pat){
 		}
 		else{
 			if (p != 0){
-				int skip = phi[p - 1];
-				p = skip;
+				p = phi[p - 1];
 			}
 			else{
 				++p; ++t;
