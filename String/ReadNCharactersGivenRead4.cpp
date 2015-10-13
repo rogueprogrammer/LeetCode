@@ -40,7 +40,7 @@ int read(char* buf, int n){
 	for (int i = 0; i < numTimes && cur != 0; ++i){
 		cur = read4(buf); 
 		bytesRead += cur;
-		buf += 4;
+		buf += cur;
 	}
 	
 	if (remainder != 0 && cur != 0){
