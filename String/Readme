@@ -1,0 +1,5 @@
+***Key string functions:
+
+string to int: stoi(string, nullptr, int_base)
+susbtr(start_posn, length)
+find(string, start_posn)
