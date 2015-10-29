@@ -51,8 +51,8 @@ void connect(TreeLinkNode* root){
 			cur->right->next = FindNextChild(cur);
 		}
 		if (cur->next) cur = cur->next;
-		if (cur->left) cur = cur->left;
-		if (cur->right) cur = cur->right;
+		else if (cur->left) cur = cur->left;
+		else if (cur->right) cur = cur->right;
 		else break;
 	}
 }
