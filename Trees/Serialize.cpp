@@ -12,8 +12,7 @@
 #include <queue>
 using namespace std;
 
-//https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
-
+//https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 
 struct TreeNode {
 	int val;
