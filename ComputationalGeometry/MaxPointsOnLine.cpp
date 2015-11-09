@@ -16,6 +16,7 @@ using namespace std;
 //https://leetcode.com/problems/max-points-on-a-line/
 
 //Idea - start from a point A, go to all points after A (A_prime) and compute the slope between A_prime and A
+//Store slopes in hashtable, each time encountering it, increasing the count by 1
 //Cover cases of duplicate points, vertical and horizontal lines
 
 struct Point{
