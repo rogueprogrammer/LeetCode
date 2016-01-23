@@ -9,12 +9,6 @@
 #include <math.h>
 using namespace std;
 
-/*
-Autocomplete & Trie class 
-Author: Devruth Khanna
-*/
-
-
 struct TrieNode{
 	bool is_end; //is the last letter of a word
 	char cur_char;
