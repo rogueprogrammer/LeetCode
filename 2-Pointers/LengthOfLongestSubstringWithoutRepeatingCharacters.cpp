@@ -31,11 +31,11 @@ int lengthOfLongestSubstring(string s){
 }
 
 int main(){
-	cout << lengthOfLongestSubstring("abcb") << endl;
-	cout << lengthOfLongestSubstring("abbacdefgh") << endl;
-	cout << lengthOfLongestSubstring("bbbbb") << endl;
-	cout << lengthOfLongestSubstring("abcbdeafgh") << endl;
-	cout << lengthOfLongestSubstring("bdb") << endl;
+	cout << lengthOfLongestSubstring("abcb") << endl; //3
+	cout << lengthOfLongestSubstring("abbacdefgh") << endl; //8
+	cout << lengthOfLongestSubstring("bbbbb") << endl; //1
+	cout << lengthOfLongestSubstring("abcbdeafgh") << endl; //8
+	cout << lengthOfLongestSubstring("bdb") << endl; //2
 
 
 	return 0;
