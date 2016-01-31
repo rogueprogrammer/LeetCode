@@ -20,10 +20,9 @@ int lengthOfLongestSubstring(string s){
 	int i = 0;
 	for (; i < s.size(); ++i){
 		char c = s[i];
-		int LASTSEENINDEX = lastSeenIndex[c];
 		if (lastSeenIndex[c] != -1 && lastSeenIndex[c] >= start){ //repeating character
 			maxLen = max(maxLen, (i - 1) - start + 1);
-			start = LASTSEENINDEX + 1;
+			start = lastSeenIndex[c] + 1;
 		}
 		lastSeenIndex[c] = i;
 	}
