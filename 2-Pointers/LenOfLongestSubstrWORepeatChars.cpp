@@ -26,8 +26,7 @@ int lengthOfLongestSubstring(string s){
 		}
 		lastSeenIndex[c] = i;
 	}
-	maxLen = max(maxLen, i - start );
-	return maxLen;
+	return max(maxLen, i - start );
 }
 
 int main(){
