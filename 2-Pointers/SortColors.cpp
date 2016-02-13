@@ -11,13 +11,15 @@
 using namespace std;
 #define DEBUG_1D(x) for(int i = 0; i < x.size(); ++i){cout << x[i] << " ";} cout << endl;
 #define DEBUG_2D(x) for(int i = 0; i < x.size(); ++i){ for(int j = 0; j < x[0].size(); ++ j){cout << x[i][j] << " ";} cout << endl;}
+//https://leetcode.com/problems/sort-colors/
+//(passed all tests)
 
 void sortColors(vector<int>& nums) {
 	int lo = 0;
 	int mid = 0;
 	int hi = nums.size() - 1;
 	
-	while (mid < hi){
+	while (mid <= hi){
 		switch (nums[mid]){
 			case 0:
 				swap(nums[lo++], nums[mid++]);
