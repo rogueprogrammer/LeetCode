@@ -14,24 +14,38 @@ using namespace std;
 
 //https://leetcode.com/problems/string-to-integer-atoi/
 
-int myAtoi(string str) {
-	int len = str.size();
-	int res = 0;
-	int i = 0;
-	bool is_negative = false;
 
-	while (str[i] == ' ') ++i;
-	if (str[i] == '-' || str[i] == '+'){
-		if (str[i] == '-') is_negative = true;
-		++i;
-	}
+//"1234"
+//"-123asdv"
+int atoi(const char *str ){
+    
+    int result;
+    int i = 0;
+    bool isNegative = false;
+    //ignore the first set of white spaces
+    while(str[i++] == ' '){ }
+    
+    if(str[i] == '-' || str[i] == '+'){
+        if(str[i] == '-') isNegative = true;
+        ++i;
+    }
+    
 
-	for (; i < len; ++i){
-		if (str[i] > '9' || str[i] < '0') return 0; //handles case of when non-numeric characters are involved
-		int cur = str[i] - '0';
-		res += cur * pow(10, len - i - 1);
-	}
-	if (is_negative) res *= -1;
-	
-	return res;
+    while(str[i]){
+        if(str[i] == ' ') { ++i; continue; }
+        //ensure that str[i] is numeric
+        if(str[i] > '9' || str[i] < '0'){ //check return code
+            if(isNegative) result *= -1;
+            return result;
+        }
+        int curDigit = str[i] - '0';
+        
+        result = curDigit + (result * 10); 
+        ++i;
+    }    
+    if(isNegative){
+        result *= -1;
+    }
+    return result;
+
 }
