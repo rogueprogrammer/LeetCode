@@ -13,6 +13,7 @@
 using namespace std;
 
 //https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+//I used a queue/BFT approach to serialize and deserialize the binary tree.
 
 struct TreeNode {
 	int val;
