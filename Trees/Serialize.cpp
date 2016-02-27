@@ -54,6 +54,60 @@ string serialize(TreeNode* root) {
 	return res;
 }
 
+int GetNextVal(string& str){
+	int comma = str.find(',');
+	if (comma == -1){ //last number in the string left
+		int res = stoi(str);
+		str = "";
+		return res;
+	}
+	int val = stoi(str.substr(0, comma));
+	str = str.substr(comma + 1);
+	return val;
+}
+
+
+TreeNode* Deserialize(string data){
+	if (data == "" || data == "#") return NULL;
+
+	queue<TreeNode*> q;
+	q.push(new TreeNode(GetNextVal(data)));
+	TreeNode* res = q.front();
+
+	while (!q.empty()){
+		TreeNode* cur = q.front();
+		if (!cur){
+			q.pop();
+			continue;
+		}
+		q.pop();
+		
+		TreeNode* left = NULL, *right = NULL;
+		if (data == "") continue;
+		if (data[0] == '#') {
+			left = NULL;
+			data = data.substr(2);
+		}
+		else{
+			if(data != "") left = new TreeNode(GetNextVal(data));
+		}
+		if (data[0] == '#'){
+			right = NULL;
+			data = data.substr(2);
+		}
+		else{
+			if (data != "")right = new TreeNode(GetNextVal(data));
+		}
+		if (cur != NULL){
+			cur->left = left; 
+			cur->right = right;
+		}
+		if (left) q.push(left);
+		if (right) q.push(right);
+	}
+	return res;
+}
+
 
 int main(){
 
@@ -72,8 +126,8 @@ int main(){
 	cout << res << endl;
 
 	string serial = "1,2,3,null,null,4,5";
+	TreeNode* res = Deserialize(serial);
+	cout << serialize(res) << endl; //should equal serial
 	return 0;
 }
-
-
 
