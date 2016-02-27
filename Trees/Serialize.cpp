@@ -22,53 +22,36 @@ struct TreeNode {
 	TreeNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
 };
 
-
 string serialize(TreeNode* root) {
-	string str = "";
-	if (!root){
-		str += "null";
-		return str;
-	}
-	//use a queue to do a Breadth-first traversal of the tree
+	if (!root) return "null";
+	string res;
+
 	queue<TreeNode*> q;
 	q.push(root);
-	bool first = true; //first node
+
+
 	while (!q.empty()){
 		TreeNode* cur = q.front();
 		q.pop();
-		if (cur->val == -1){ 
-			str += ",null"; 
-		}
-		else {
-			if (!first){
-				str += ",";
-			}
-			str += to_string(cur->val);
-			first = false;
-		}
-		if (cur->left){ 
-			q.push(cur->left); 
-		}
-		else {
-			if (cur->val != -1){
-				q.push(new TreeNode(-1));
-			}
-		}
-		if (cur->right){
+		if (cur){
+			q.push(cur->left);
 			q.push(cur->right);
+			res += to_string(cur->val);
 		}
-		else {
-			if (cur->val != -1){
-				q.push(new TreeNode(-1));
-			}
+		else{
+			res += "null";
 		}
+		res += ",";
 	}
-	int i = str.size() - 5;
-	while (str.substr(i, 5) == ",null"){ //get rid of all the last ",NULL"s
-		str.erase(i, 5);
+	int i = res.size() - 5;
+	string str = res.substr(i, 5);
+	while (res.substr(i, 5) == "null,"){
+		res.erase(i, 5);
 		i -= 5;
 	}
-	return str;
+	if (res.back() == ',') res.pop_back();
+
+	return res;
 }
 
 
