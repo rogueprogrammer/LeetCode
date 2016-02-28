@@ -96,31 +96,7 @@ int main(){
 	return 0;
 }
 
-/* This recursive solution won't work, as an iterative BFT is required.
 
-void connect(TreeLinkNode* root){
-	if (!root){
-		return;
-	}
-	
-	TreeLinkNode* cur = root;
-
-	if (cur->left){
-		if (cur->right){
-			cur->left->next = cur->right;
-		}
-		else{
-			cur->left->next = FindNextChild(cur);
-		}
-	}
-	if (cur->right){
-		cur->right->next = FindNextChild(cur);
-	}
-	
-	Connect(root->left);
-	Connect(root->right);
-}
-*/
 
 
 
