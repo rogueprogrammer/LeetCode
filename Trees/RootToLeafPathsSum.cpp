@@ -72,7 +72,7 @@ int main(){
 	vector<int> cur;
 	vector<vector<int>> res;
 	int target = 12;
-  pathSum(a, target);
+        pathSum(a, target);
 
 	return 0;
 }
