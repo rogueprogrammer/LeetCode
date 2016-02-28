@@ -26,44 +26,43 @@ struct TreeLinkNode {
 
 
 
-TreeLinkNode* FindNextChild(TreeLinkNode* root){
-	if (!root || !root->next) return NULL;
-	if (root->next){
-		if (root->next->left) return root->next->left;
-		if (root->next->right) return root->next->right;
-		else FindNextChild(root->next);
-	}
-}
 
-void connect(TreeLinkNode* root){
+void connect(TreeLinkNode* root) {
 
 	TreeLinkNode* cur = root;
-	while (cur){
-		if (cur->left){
-			if (cur->right){
-				cur->left->next = cur->right;
-			}
-			else{
-				cur->left->next = FindNextChild(cur);
-			}
-		}
-		if (cur->right){
-			cur->right->next = FindNextChild(cur);
-		}
-		if (cur->next) cur = cur->next;
-		else if (cur->left) cur = cur->left;
-		else if (cur->right) cur = cur->right;
-		else break;
-	}
-}
 
+	while (cur){ //For each level
+		TreeLinkNode* curChild = new TreeLinkNode(0);
+		TreeLinkNode* nextLevel = cur;
+		while (nextLevel && !nextLevel->left && !nextLevel->right) {//find beginning node of next level
+			nextLevel = nextLevel->next;
+		}
+		if (nextLevel){
+			if (nextLevel->left) 
+				nextLevel = nextLevel->left;
+			else if (nextLevel->right) 
+				nextLevel = nextLevel->right;
+		}
+
+		while (cur){ //For current level
+			if (cur->left){
+				curChild->next = cur->left;
+				curChild = curChild->next;
+			}
+			if (cur->right){
+				curChild->next = cur->right;
+				curChild = curChild->next;
+			}
+			cur = cur->next;
+		}
+		cur = nextLevel;
+	}
+
+}
 
 
 
 int main(){
-
-
-
 	/*TreeLinkNode* a = new TreeLinkNode(2); 
 	TreeLinkNode* b = new TreeLinkNode(1);
 	TreeLinkNode* c = new TreeLinkNode(3);
