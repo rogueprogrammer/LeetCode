@@ -44,7 +44,7 @@ void DFS(TreeNode* root, int sumAcc, int target, vector<vector<int>>& res, vecto
 }
 
 vector<vector<int>> pathSum(TreeNode* root, int sum) {
-  int sumAcc = 0;
+        int sumAcc = 0;
 	vector<int> cur;
 	vector<vector<int>> res;
 	DFS(a, sumAcc, sum, res, cur);
