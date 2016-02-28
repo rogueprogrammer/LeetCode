@@ -28,7 +28,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 	ListNode* cur = &result;
 	bool carry = false;
 	while (l1 || l2 || carry){
-		if (!l1 && !l2){
+		if (!l1 && !l2){ //carry the 1
 			cur->next = new ListNode(1);
 		}
 		int v1 = 0;
