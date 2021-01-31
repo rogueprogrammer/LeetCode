@@ -12,14 +12,19 @@
 using namespace std;
 
 
-//Print all the individual Bits of a number
-void PrintBits(int x){
-	for (int i = sizeof(x)-1; i >= 0; i--){
-	  bool res = (x & (1 << i));
-	  cout << res << endl;
-	}
+void bin(unsigned n)
+{
+    if (n > 1) {
+        bin(n / 2);
+    }
+
+    cout << n % 2;
 }
 
+void printBits(int n) {
+    bin(n);
+    cout << endl;
+}
 
 
 //Set bit to 1. If it's already a 1, it remains a 1
